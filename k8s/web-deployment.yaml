@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web-app
+  namespace: jenkins-ci-webapp
   labels:
     app: web-app
 spec:
@@ -16,7 +17,8 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: your-docker-image:latest
+        image: fahadmalik07/jenkins-ci-webapp:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
         env:
@@ -29,5 +31,3 @@ spec:
           limits:
             memory: "512Mi"
             cpu: "1"
-      imagePullSecrets:
-      - name: regcred
