@@ -1,0 +1,20 @@
+{
+  "name": "jenkins-ci-webapp",
+  "version": "1.0.0",
+  "description": "A simple web application for Jenkins CI/CD pipeline project.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "build": "docker build -t jenkins-ci-webapp .",
+    "deploy": "./scripts/deploy.sh"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9" // Example dependency for MongoDB
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

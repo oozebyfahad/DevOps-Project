@@ -1,0 +1,15 @@
+# Ignore the node_modules directory
+node_modules
+# Ignore log files
+*.log
+# Ignore Dockerfile and .dockerignore for the image build context
+Dockerfile
+.dockerignore
+# Ignore any local environment files
+.env
+# Ignore build artifacts
+dist
+build
+# Ignore any temporary files
+*.tmp
+*.temp
