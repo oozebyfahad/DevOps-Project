@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "fahadmalik07/jenkins-ci-webapp"
-        DOCKER_CREDS = credentials('dockerhub-creds')  // Jenkins credentials ID
-    }
+    DOCKER_IMAGE = "fahadmalik07/jenkins-ci-webapp"
+    DOCKER_CREDS = credentials('dockerhub-creds')
+    KUBECONFIG = "/var/lib/jenkins/.kube/config"
+}
 
     triggers { githubPush() }
 
